@@ -1,3 +1,6 @@
-var a = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+var a = [1, 2, 3];
+var b = [1, 2, 3];
 
-console.log(a.filter((index, val, a) => console.log(index, val, a[val])));
+if (undefined === undefined) {
+  console.log(123);
+}
