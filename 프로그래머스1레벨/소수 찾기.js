@@ -12,7 +12,7 @@ function solution(n) {
       }
     }
   }
-  return s.size;
+  return s;
 }
 
 const n = 5;
