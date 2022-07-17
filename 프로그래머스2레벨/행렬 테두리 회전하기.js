@@ -2,7 +2,6 @@ function solution(rows, columns, queries) {
   var answer = [];
   let map = Array.from(Array(rows), () => new Array(columns)); // 2차원 배열 생성
   let num = 1;
-
   for (let i = 0; i < rows; i++) {
     // 2차원배열에 1부터 rows*columns까지 숫자 넣기
     for (let j = 0; j < columns; j++) {
