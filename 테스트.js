@@ -1,5 +1,5 @@
-let a = 3;
-if (0 <= a < 5) {
-  a -= 1;
-  console.log(123);
-}
+let a = [
+  { a: 123, a: 456 },
+  { b: 123, b: 456 },
+];
+console.log([...a]);
