@@ -5,4 +5,5 @@ function solution(s) {
 }
 
 s = "Zbcdefg";
+
 console.log(solution(s));
