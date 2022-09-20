@@ -1,5 +1,3 @@
-const { checkPrime } = require("crypto");
-
 const line = require("fs").readFileSync("./input.txt", "utf8");
 const inputData = line.trim().split("\n");
 
