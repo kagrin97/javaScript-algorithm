@@ -4,17 +4,6 @@ let input = require("fs")
   .trim()
   .split("\n");
 
-const n = +input[0];
-let board = [];
-for (let i = 1; i < n + 1; i++) {
-  board.push(
-    ...input[i]
-      .split(" ")
-      .map(Number)
-      .filter((val) => val != 0)
-  );
-}
-
 const N = +input[0];
 const halfN = N / 2;
 const stats = input.slice(1).map((str) => str.split(" ").map(Number));
