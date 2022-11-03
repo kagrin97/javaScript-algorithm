@@ -1,5 +1,5 @@
-let a = [
-  { a: 123, a: 456 },
-  { b: 123, b: 456 },
-];
-console.log([...a]);
+let a = `<meta name="google-site-verification" content="tHzgblVRtM5UJi1BBTUouxZXp_txiBpb0KwUytGz0rI" />`;
+
+let b = `<metaname="google-site-verification"content="tHzgblVRtM5UJi1BBTUouxZXp_txiBpb0KwUytGz0rI"/>`;
+
+console.log(a);
