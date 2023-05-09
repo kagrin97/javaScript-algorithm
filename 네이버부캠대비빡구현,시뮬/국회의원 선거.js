@@ -19,6 +19,7 @@ while (true) {
     }
   }
 
+  // 다솜이보다 득표수가 많은 사람이 없을 경우 답 출력후 종료
   if (max === 0) {
     console.log(answer);
     break;
