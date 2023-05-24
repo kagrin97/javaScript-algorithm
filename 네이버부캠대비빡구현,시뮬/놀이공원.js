@@ -17,6 +17,8 @@ for (let i = 1; i < N + 1; i++) {
   const [x, y] = input[i].split(" ");
   const start = Number(x.slice(0, 2)) * 60 + Number(x.slice(2)) - 10;
   const end = Number(y.slice(0, 2)) * 60 + Number(y.slice(2)) + 10;
+  console.log(x, y, start, end);
+
   eventList.push([start, end]);
 }
 
