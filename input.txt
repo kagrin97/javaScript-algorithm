@@ -1,4 +1,1 @@
-3
-ABB
-BAA
-BBA
+long_and_mnemonic_identifier

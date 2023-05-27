@@ -24,7 +24,7 @@ const daeGakDy = [-1, 1, -1, 1];
 function winnerCheck(dx, dy, i, j, mainName) {
   // 4방향 검사
   for (let k = 0; k < 4; k++) {
-    // 42,43줄 코드에서 x,y를 다음 경로로 갱신하기때문에 본래 값으로 갱신해야함
+    // 42,43줄 코드에서 x,y를 다음 경로로 갱신하기때문에 초기에 본래 값으로 갱신해야함
     let x = i;
     let y = j;
 
@@ -57,7 +57,7 @@ function winnerCheck(dx, dy, i, j, mainName) {
 for (let i = 0; i < N; i++) {
   for (let j = 0; j < N; j++) {
     if (board[i][j] !== ".") {
-      const mainName = board[i][j];
+      const mainName = board[i][j]; // 기준 글자
 
       // 수평, 수직 검사
       winnerCheck(defaultDx, defaultDy, i, j, mainName);
