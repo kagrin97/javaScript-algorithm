@@ -5,6 +5,7 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
+// 디지털 숫자와 실제 값을 맵핑
 const obj = {
   "063": "0",
   "010": "1",
@@ -29,13 +30,15 @@ rl.on("line", function (line) {
 });
 
 function solution(A, B) {
-  let strA = convertSegmentToNum(A);
+  let strA = convertSegmentToNum(A); // 나열된 2진수들을 10진수로 변환
   let strB = convertSegmentToNum(B);
 
+  // 더한후 10진수를 디지털로 변환하기 위한 중간 변환
   let totalNum = String(Number(strA) + Number(strB)).split("");
 
   let result = "";
   for (let num of totalNum) {
+    // 객체의 값으로 객체의 키를 찾는 로직
     result += Object.entries(obj).find(([k, v]) => v === num)[0];
   }
 
