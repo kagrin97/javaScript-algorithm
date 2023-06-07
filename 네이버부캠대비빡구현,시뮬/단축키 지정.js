@@ -66,7 +66,7 @@ for (let i = 0; i < N; i++) {
     continue;
   }
 
-  // 위 코드중에 continue가 안되면 실행됨 즉 단축키지정이 안되는 문자일경우 그냥 넣음
+  // continue가 안되었으면 실행됨 즉 단축키지정이 안되는 문자일경우 그냥 넣음
   result.push(curStrings.join(" "));
 }
 

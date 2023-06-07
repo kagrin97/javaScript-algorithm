@@ -1,6 +1,4 @@
-5
-New
-Open
-Save
-Save As
-Save All
+3 100 10
+26
+103
+59
