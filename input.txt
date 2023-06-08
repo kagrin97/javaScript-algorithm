@@ -1,6 +1,1 @@
-5 5
-good#
-an##b
-messy
-e##it
-#late
+2 1234567890
