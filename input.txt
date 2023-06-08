@@ -1,5 +1,4 @@
-4 4
-luka
-o#a#
-kula
-i#as
+3 10
+..........
+..XXX.XXX.
+XXX.......
