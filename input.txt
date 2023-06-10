@@ -1,10 +1,5 @@
 3
-4 1 2 3 4
-6 5 6 7 8 9 10
-4 11 21 31 41
-5
-8 1 2 3 4 5 6 7 8
-7 1 2 3 7 8 9 10
-14 1 2 3 4 5 6 7 8 9 10 11 21 31 41
-5 41 42 43 44 45
-10 1 5 6 7 8 9 10 11 21 31
+i want to see you
+next week
+good luck
+i want next good luck week to see you
