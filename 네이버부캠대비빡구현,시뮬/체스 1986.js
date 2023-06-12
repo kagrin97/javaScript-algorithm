@@ -39,6 +39,7 @@ dropChess(PIndex);
 
 // 나이트 움직일수 있는 장소 "go"로 체크
 function goKnight(indexArr) {
+  // 나이트가 움직일수 있는 8개의 위치
   const dx = [-1, -2, -2, -1, 1, 2, 2, 1];
   const dy = [-2, -1, 1, 2, 2, 1, -1, -2];
 
@@ -60,87 +61,26 @@ function goKnight(indexArr) {
 
 // 퀸이 움직일수 있는 장소 "go"로 체크
 function goQueen(indexArr) {
+  // 퀸이 움질일수있는 8개의 방향
+  const dx = [-1, 1, 0, 0, -1, -1, 1, 1];
+  const dy = [0, 0, 1, -1, -1, 1, -1, 1];
+
   for (let i = 0; i < indexArr.length; i++) {
     const [x, y] = indexArr[i];
 
-    // 위로 이동
-    let nxUpIndex = x;
-    while (true) {
-      nxUpIndex--;
+    for (let k = 0; k < 8; k++) {
+      let nx = x;
+      let ny = y;
+      while (true) {
+        nx += dx[k];
+        ny += dy[k];
 
-      if (nxUpIndex < 0 || board[nxUpIndex][y] === false) break;
-      board[nxUpIndex][y] = "go";
-    }
-
-    // 아래로 이동
-    let nxDownIndex = x;
-    while (true) {
-      nxDownIndex++;
-
-      if (nxDownIndex >= N || board[nxDownIndex][y] === false) break;
-      board[nxDownIndex][y] = "go";
-    }
-
-    // 왼쪽 이동
-    let nyLeftIndex = y;
-    while (true) {
-      nyLeftIndex--;
-
-      if (nyLeftIndex < 0 || board[x][nyLeftIndex] === false) break;
-      board[x][nyLeftIndex] = "go";
-    }
-
-    // 오른쪽 이동
-    let nyRightIndex = y;
-    while (true) {
-      nyRightIndex++;
-
-      if (nyRightIndex >= M || board[x][nyRightIndex] === false) break;
-      board[x][nyRightIndex] = "go";
-    }
-
-    // 왼쪽 위 대각 이동
-    let nx = x;
-    let ny = y;
-    while (true) {
-      nx--;
-      ny--;
-
-      if (nx < 0 || ny < 0 || board[nx][ny] === false) break;
-      board[nx][ny] = "go";
-    }
-
-    // 오른 위 대각 이동
-    nx = x;
-    ny = y;
-    while (true) {
-      nx--;
-      ny++;
-
-      if (nx < 0 || ny >= M || board[nx][ny] === false) break;
-      board[nx][ny] = "go";
-    }
-
-    // 오른 아래 대각 이동
-    nx = x;
-    ny = y;
-    while (true) {
-      nx++;
-      ny++;
-
-      if (nx >= N || ny >= M || board[nx][ny] === false) break;
-      board[nx][ny] = "go";
-    }
-
-    // 왼쪽 아래 대각 이동
-    nx = x;
-    ny = y;
-    while (true) {
-      nx++;
-      ny--;
-
-      if (nx >= N || ny < 0 || board[nx][ny] === false) break;
-      board[nx][ny] = "go";
+        // 범위를 벗어나거나 말을 만나면 종료
+        if (nx >= N || ny >= M || nx < 0 || ny < 0 || board[nx][ny] === false) {
+          break;
+        }
+        board[nx][ny] = "go";
+      }
     }
   }
 }
